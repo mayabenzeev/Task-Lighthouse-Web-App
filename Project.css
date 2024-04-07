@@ -1,0 +1,29 @@
+* {
+    margin: 7px;
+    padding: 0;
+    font-family: 'Avenir', sans-serif;
+    box-sizing: border-box;
+}
+
+.containers{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+
+
+}
+.column {
+    background-color: lightgray;
+    min-height: 100vh;
+    min-width: 40vh;
+
+
+
+}
+
+
+.title {
+    text-align: left;
+    font-weight: bold;
+}
