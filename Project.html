@@ -12,42 +12,50 @@
 
 </header>
 <body>
-<div class="containers">
-    <div class="column" id="to do">
-        <div class="title">To Do</div>
-        <div class="main task">
-            <p>Task name</p>
-            <i class="fi fi-ss-user"></i>
+<div class="boxes-container">
+    <div class="column-container">
+        <div class="column-header">
+            <h2>To Do</h2>
         </div>
 
-        <div class="sub tasks">
-            <p>Main Task I</p>
-            <form>
-                <input type="checkbox" id="subtask1" name="subtask 1" value="add new task">
-                <label for="subtask1">Task I</label><br>
-                <input type="checkbox" id="subtask2" name="subtask 2" value="add new task">
-                <label for="subtask2">Task II</label><br>
-                <input type="checkbox" id="subtask3" name="subtask 3" value="add new task">
-                <label for="subtask3">Task III</label><br>
-            </form>
+        <div class="column" id="to-do">
+            <div class="task-container">
+                <div class="task-body">
+                    <label for="task-text"></label>
+                    <input type="text" id="task-text" class="task-input"/>
+                    <img src="plus.png" alt="+" id="AddTaskClick"/>
+                </div>
+                <ul id="list-item" class="list-item"></ul>
+            </div>
+            <script type="text/javascript" src="script.js"></script>
         </div>
     </div>
-
-    <div class="column" id="in progress">
-        <div class="title">In Progress</div>
+    <div class="column-container">
+        <div class="column-header">
+            <h2>In Progress</h2>
+        </div>
+        <div class="column" id="in-progress"></div>
     </div>
-
-    <div class="column" id="manager review">
-        <div class="title">Manager Review</div>
+    <div class="column-container">
+        <div class="column-header">
+            <h2>Manager Review</h2>
+        </div>
+        <div class="column" id="manager-review"></div>
     </div>
-
-    <div class="column" id="done">
-        <div class="title">Done</div>
+    <div class="column-container">
+        <div class="column-header">
+            <h2>Done</h2>
+        </div>
+        <div class="column" id="done"></div>
     </div>
 </div>
-<!--<div class="main task">-->
-<!--    <p>Task name</p>-->
-<!--    <i class="fi fi-ss-user"></i>-->
+
+<!--<div class="task-container">-->
+<!--    <div class="task-body">-->
+<!--        <label for="task-text"></label>-->
+<!--        <input type="text" id="task-text" class="task-input"/>-->
+<!--        <img src="plus.png" alt="+" id="AddTaskClick"/>-->
+<!--    </div>-->
 <!--</div>-->
 
 <!--<div class="sub tasks">-->
