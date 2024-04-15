@@ -17,15 +17,14 @@
         <div class="column-header">
             <h2>To Do</h2>
         </div>
-
         <div class="column" id="to-do">
             <div class="task-container">
+                <ul id="list-item" class="list-item"></ul>
                 <div class="task-body">
                     <label for="task-text"></label>
                     <input type="text" id="task-text" class="task-input"/>
-                    <img src="plus.png" alt="+" id="AddTaskClick"/>
+                    <img src="plus.png" alt="+" id="AddTaskClick" onclick="createTask()"/>
                 </div>
-                <ul id="list-item" class="list-item"></ul>
             </div>
             <script type="text/javascript" src="script.js"></script>
         </div>
