@@ -61,3 +61,92 @@ function finishEdit(input) {
     // Replace input with the new span
     input.parentNode.replaceChild(newSpan, input);
 }
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    var dragSrcEl = null;
+
+    function handleDragStart(e) {
+        this.style.opacity = '0.4';
+        dragSrcEl = this;
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/html', this.outerHTML);
+    }
+
+    function handleDragOver(e) {
+        if (e.preventDefault) {
+            e.preventDefault();
+        }
+        e.dataTransfer.dropEffect = 'move';
+        return false;
+    }
+
+    function handleDragEnter(e) {
+        this.classList.add('over');
+    }
+
+    function handleDragLeave(e) {
+        this.classList.remove('over');
+    }
+
+    function handleDrop(e) {
+        e.preventDefault();
+        if (e.stopPropagation) {
+            e.stopPropagation();
+        }
+
+        if (dragSrcEl !== this) {
+            // Check if we're dropping into a column or before another task
+            const hasClassColumn = this.classList.contains('column');
+            if (hasClassColumn) {
+                this.appendChild(dragSrcEl);
+            } else {
+                this.parentNode.insertBefore(dragSrcEl, this);
+            }
+        }
+    }
+
+    function handleDragEnd(e) {
+        this.style.opacity = '1';
+        columns.forEach(column => {
+            column.classList.remove('over');
+        });
+    }
+
+    let columns = document.querySelectorAll('.column');
+    columns.forEach(column => {
+        column.addEventListener('dragover', handleDragOver, false);
+        column.addEventListener('dragenter', handleDragEnter, false);
+        column.addEventListener('dragleave', handleDragLeave, false);
+        column.addEventListener('drop', handleDrop, false);
+    });
+
+    function updateDraggableItems() {
+        let items = document.querySelectorAll('.task-body');
+        items.forEach(item => {
+            item.setAttribute('draggable', 'true');
+            item.addEventListener('dragstart', handleDragStart, false);
+            item.addEventListener('dragend', handleDragEnd, false);
+        });
+    }
+
+    updateDraggableItems(); // Initial update for existing items
+
+    window.createTask = function() {
+        if (taskValue.value.trim() === "") {
+            alert("Please enter a task");
+            taskValue.focus();
+            return;
+        }
+
+        let li = document.createElement("li");
+        li.className = "task-body";
+        li.innerHTML = `<span class="task-text">${taskValue.value}</span>
+                        <img class="rename" src="rename-icon.png" onclick="renameTask(this)"/>`;
+        listItems.appendChild(li); // Append the new task to the list
+        taskValue.value = ""; // Clear the input after adding the item
+
+        updateDraggableItems(); // Re-bind draggable items including new ones
+    };
+});
+

@@ -55,9 +55,16 @@ header {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 15px;
     margin-bottom: 20px;
+    cursor:move;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    border:2px dashed transparent;
 
 }
+.task-body:hover {
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    border-color:rgba(162,179,207,.2)!important;
 
+}
 .task-body input {
     flex: 1;
     border: none;
