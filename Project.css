@@ -96,10 +96,8 @@ ul li {
 
 .task-body img.rename {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    /*opacity: 0;  !* Start with the icon being transparent *!*/
-    /*transition: opacity 0.3s ease;  !* Smooth transition for the opacity change *!*/
+    opacity: 0;  /* Start with the icon being transparent */
+    transition: opacity 0.3s ease;  /* Smooth transition for the opacity change */
 }
 
 .task-body:hover img.rename {
