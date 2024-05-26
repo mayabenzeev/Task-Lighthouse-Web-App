@@ -20,7 +20,7 @@ window.createTask = function() {
     let li = document.createElement("li");
     li.className = "task-body"; // Use your existing class for tasks
     li.innerHTML = `<span class="task-text">${taskValue.value}</span>
-                    <img class="rename" src="rename-icon.png" onclick="renameTask(this)"/>`;
+                    <img class="rename" src="/static/img/rename-icon.png" onclick="renameTask(this)"/>`;
     listItems.appendChild(li); // Append the new task to the list
     taskValue.value = ""; // Clear the input after adding the item
 };
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let li = document.createElement("li");
         li.className = "task-body";
         li.innerHTML = `<span class="task-text">${taskValue.value}</span>
-                        <img class="rename" src="rename-icon.png" onclick="renameTask(this)"/>`;
+                        <img class="rename" src="/static/img/rename-icon.png" onclick="renameTask(this)"/>`;
         listItems.appendChild(li); // Append the new task to the list
         taskValue.value = ""; // Clear the input after adding the item
 
