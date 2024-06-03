@@ -1,0 +1,33 @@
+/* HomePage.css */
+.home-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-list {
+    margin: 20px;
+    padding: 20px;
+}
+
+.project-link {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.logout-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}

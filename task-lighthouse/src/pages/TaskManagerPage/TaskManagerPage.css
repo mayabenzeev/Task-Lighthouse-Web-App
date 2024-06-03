@@ -1,0 +1,78 @@
+/* TaskManager.css - Styles for task management interface */
+.task-manager-container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.task-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.task-item:hover {
+    background-color: #e8e8e8;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.back-home {
+    display: block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #666;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-home:hover {
+    background-color: #444;
+}
+
+/* Drag and drop styling */
+.drag-over {
+    border-color: #000;
+}
+
+.draggable {
+    user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .task-list {
+        grid-template-columns: 1fr;
+    }
+}
