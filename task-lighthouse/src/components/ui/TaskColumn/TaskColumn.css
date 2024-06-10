@@ -1,0 +1,39 @@
+/* TaskColumn.css */
+.column-container {
+    background-color: #ffffff; /* White background for columns */
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 250px; /* Fixed width for uniformity */
+    margin: 0 10px; /* Spacing between columns */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column-header h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .column {
+    background-color: #f9f9f9; /* Slightly off-white for tasks area */
+    flex-grow: 1;
+    overflow-y: auto; /* Allows scrolling within the column */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff; /* Consistent button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: auto; /* Aligns button to the bottom */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

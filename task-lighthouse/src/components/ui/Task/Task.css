@@ -1,0 +1,40 @@
+/* Task.css */
+.task-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for visual effects */
+}
+
+.task-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhance shadow on hover for better visibility */
+}
+
+.task-item.is-dragging {
+    background-color: #e8f0fe; /* Light blue background to indicate dragging */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Deeper shadow to simulate elevation */
+}
+
+.task-item p {
+    margin: 0;
+    color: #333;
+    flex-grow: 1; /* Ensures text takes up available space */
+}
+
+.task-item button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px; /* Optional: Adjust font size for better readability */
+}
+
+.task-item button:hover {
+    color: #0056b3;
+}
